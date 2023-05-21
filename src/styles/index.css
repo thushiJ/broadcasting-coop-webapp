@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+:root {
+	--small-text: #8a9ba2;
+	--red: #f30543;
+	--background: #131313;
+	--searchbar: rgb(58, 58, 58);
+	--grey: #313131;
+	--clr-white: #fff;
+	--clr-purple: #4b145b;
+	--clr-grey-special: #6b6b6b;
+	--clr-black: #222;
+	--facebook: #4267b2;
+	--apple: #38415f;
+	--red-circle-1: rgba(150, 16, 56, 0.1);
+	--red-circle-2: rgba(151, 47, 47, 0.15);
+	--red-circle-3: rgba(151, 47, 47, 0.2);
+	/* used as bg in favorite and watchlist button in card*/
+	--card-small-button: rgba(0, 0, 0, 0.575);
+	--card-booster-button: rgb(255, 238, 0);
+}
+* {
+	font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+body {
+	margin: 0;
+	background-color: var(--background);
+}
+
+.navbar {
+	background-color: var(--background);
+}
+
+.navbar-image img {
+	width: 120px;
+	height: 20px;
+}
+.home-card-carousel img {
+	width: 90px;
+	height: 20px;
+}
+.searchbar {
+	background-color: var(--searchbar);
+}
+.navbar-search input {
+	background-color: var(--searchbar);
+}
+.background-gray {
+	background-color: var(--grey);
+}
+.button-red {
+	background-color: var(--red);
+}
+.button-white {
+	background-color: var(--clr-white);
+}
+.small-text {
+	color: var(--small-text);
+}
+.red-text {
+	color: var(--red);
+}
+.black-text {
+	color: var(--clr-black);
+}
+.gray-text {
+	color: var(--small-text);
+}
+.white-text {
+	color: var(--clr-white);
+}
+
+/* overflow image */
+
+/* section */
+.section {
+	width: 90vw;
+	margin: 0 auto;
+	max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+	.section {
+		width: 95vw;
+	}
+}
+
+/*
+=============== 
+Questions
+===============
+*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.q-container {
+	width: 70%;
+	margin: 5rem auto;
+	color: var(--clr-white);
+}
+.info {
+	background: var(--searchbar);
+}
+
+.question {
+	padding: 1rem 1.5rem;
+	border-bottom: 2px solid var(--clr-grey-special);
+
+	border-radius: var(--radius);
+	box-shadow: var(--light-shadow);
+}
+
+.question h4 {
+	text-transform: none;
+	line-height: 1.5;
+}
+
+.question p {
+	color: var(--clr-grey-3);
+	margin-bottom: 0;
+	margin-top: 0.5rem;
+}
+
+.question header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.question header h4 {
+	margin-bottom: 0;
+}
+
+.btn {
+	background: transparent;
+	border-color: transparent;
+	width: 2rem;
+	height: 2rem;
+	background: var(--clr-grey-special);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: var(--clr-white);
+	cursor: pointer;
+	margin-left: 1rem;
+	align-self: center;
+	min-width: 2rem;
+}
+
+.question-title {
+	cursor: pointer;
+}
+
+.hero-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('../../src/Assets/Images/background.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.livetv-heroimage {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+		url('../Assets/Images/LiveTvBackDrop.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	overflow: hidden;
+}
+
+/* Grid card */
+
+.gridCard-hover:hover {
+	background-color: var(--red);
+	color: var(--clr-white);
+}
+
+.gridCard-hover:hover h3 {
+	color: var(--clr-white);
+}
+.gridCard-hover:hover p {
+	color: var(--clr-white);
+}
+.gridCard-hover:hover h3 span {
+	color: var(--clr-white);
+}
+
+.img-shadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* video page sidebar */
+.feature-side-nav:hover,
+.feature-side-nav:hover p {
+	color: var(--red);
+}
+
+/* backdrop */
+.backdrop-bottom {
+	height: 40%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.973) 17%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+/* login */
+.login_modal {
+	z-index: 100;
+	height: 100%;
+	overflow: hidden;
+	background-color: #131313bb;
+}
+
+.facebook-button {
+	background-color: var(--facebook);
+}
+.apple-button {
+	background-color: var(--apple);
+}
+
+.red-circle-1 {
+	background-color: var(--red-circle-1);
+}
+.red-circle-2 {
+	background-color: var(--red-circle-2);
+}
+.red-circle-3 {
+	background-color: var(--red-circle-3);
+}
+.loginpage-back {
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(90deg, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+	overflow: hidden;
+}
+
+/* gradient in live tv landing page coursel */
+.gradientX {
+	background: rgb(19, 19, 16);
+	background: linear-gradient(
+		90deg,
+		rgba(19, 19, 16, 1) 0%,
+		rgba(255, 255, 255, 0) 30%,
+		rgba(255, 255, 255, 0) 50%,
+		rgba(255, 255, 255, 0) 70%,
+		rgba(19, 19, 16, 1) 100%
+	);
+}
+
+/* video player */
+.video-js {
+	/* position: absolute; */
+	width: 100% !important;
+	height: 80% !important;
+	/* aspect-ratio: 16/9; */
+	display: block;
+	margin: auto;
+}
+.vjs-tech {
+}

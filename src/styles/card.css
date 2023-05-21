@@ -1,0 +1,173 @@
+/* cards used in coursel except in home page */
+
+.add-button {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease-in-out;
+	background-color: var(--card-small-button);
+}
+
+.booster-button {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease-in-out;
+	color: var(--clr-black);
+}
+.play-button {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease-in-out;
+	color: var(--clr-black);
+}
+.play-button button {
+	color: var(--clr-white);
+	background: rgb(255, 8, 104);
+	background: linear-gradient(
+		120deg,
+		rgba(255, 8, 104, 1) 0%,
+		rgba(255, 119, 0, 1) 100%
+	);
+}
+
+.booster-button button {
+	background-color: var(--card-booster-button);
+}
+.bg-img:hover .add-button,
+.bg-img:hover .booster-button,
+.bg-img:hover .play-button {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.add-button:hover {
+	background-color: var(--red);
+}
+.movie-card {
+	transition: 0.2s;
+}
+.movie-card:hover {
+	background-color: var(--clr-white);
+	height: 440px;
+}
+.movie-card:hover .bottom-details,
+.movie-card:hover .title {
+	color: var(--clr-black);
+	opacity: 1;
+	overflow: visible;
+}
+.bottom-details {
+	opacity: 0;
+	color: beige;
+	transition: 0.2s;
+}
+.title {
+	color: white;
+}
+
+.watchlist-dropdown {
+	background-color: var(--background);
+	z-index: 90;
+}
+
+.add-new-card {
+	background-color: var(--searchbar);
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+.home-carousel-container {
+	position: relative;
+	transition: 0.5s;
+}
+.home-carousel-container:hover {
+	transform: scale(1.3);
+}
+.home-carousel-container .card {
+	position: relative;
+	width: 80%;
+	height: 450px;
+	background: #232323;
+	border-radius: 5px;
+	overflow: hidden;
+	opacity: 0.6;
+}
+
+.home-carousel-container .card:hover {
+	opacity: 1;
+}
+
+.home-carousel-container .card .contentBx {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	transition: 1s;
+	z-index: 90;
+}
+
+.home-carousel-container .card:hover .contentBx {
+	height: 40%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.973) 40%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+@media screen and (max-width: 1500px) {
+	.home-carousel-container .card:hover .contentBx {
+		height: 50%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.home-carousel-container .card:hover .contentBx {
+		height: 60%;
+	}
+}
+@media screen and (max-width: 930px) {
+	.home-carousel-container .card:hover .contentBx {
+		height: 65%;
+	}
+}
+
+.home-carousel-container .card .contentBx h2 {
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+.home-carousel-container .card .contentBx .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 20px;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.home-carousel-container .card:hover .contentBx .content {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+}
+
+.home-carousel-container .card .contentBx button {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 0.5s;
+}
+
+.home-carousel-container .card:hover .contentBx button {
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.7s;
+}
+
+.singlecard div:nth-child(odd) {
+	margin-top: 36px;
+}
